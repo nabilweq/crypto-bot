@@ -9,6 +9,10 @@ const bot = new Telegraf(process.env.BOT_TOKEN);
 
 const apiKey = process.env.API_KEY;
 
+app.get('/', (req, res) => {
+    res.send('Hello Bro!');
+})
+
 bot.command('start', ctx => {
     sendStartMessage(ctx)
 });
