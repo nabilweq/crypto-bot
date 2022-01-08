@@ -69,7 +69,6 @@ bot.action(priceActionList, async ctx => {
         let res = await axios.get(`https://min-api.cryptocompare.com/data/pricemultifull?fsyms=${symbol}&tsyms=USD&api_key=${apiKey} `)
 
         let data = res.data.DISPLAY[symbol].USD;
-        console.log(data);
 
         let message = 
         `
