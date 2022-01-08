@@ -4,11 +4,13 @@ const express = require('express');
 const app = express();
 const { Telegraf }  = require('telegraf');
 const axios = require('axios');
-
-const bot = new Telegraf(process.env.BOT_TOKEN);
+const cors = require("cors");
+const token = process.env.BOT_TOKEN;
+const bot = new Telegraf(token);
 
 const apiKey = process.env.API_KEY;
 
+app.use(cors());
 app.get('/', (req, res) => {
     res.send('Hello Bro!');
 })
