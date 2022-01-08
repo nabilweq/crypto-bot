@@ -1,1 +1,0 @@
-www:node bot.js
